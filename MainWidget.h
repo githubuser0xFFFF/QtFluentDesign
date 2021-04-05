@@ -15,7 +15,11 @@ public:
     MainWidget(QWidget *parent = nullptr);
     ~MainWidget();
 
+public slots:
+    void reloadStyleSheet();
+
 private:
     Ui::MainWidget *ui;
+    QString m_StyleSheetFile;
 };
 #endif // MAINWIDGET_H
