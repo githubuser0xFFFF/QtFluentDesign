@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/style">
+        <file>images/radiobutton.svg</file>
+        <file>images/radiobutton_checked.svg</file>
+        <file>images/radiobutton_checked_disabled.svg</file>
+        <file>images/radiobutton_checked_hover.svg</file>
+        <file>images/radiobutton_disabled.svg</file>
+        <file>images/radiobutton_hover.svg</file>
+        <file>images/checkbox_down_arrow.svg</file>
+        <file>images/checkbox_indeterminate.svg</file>
+        <file>images/checkbox_checked.svg</file>
+        <file>images/toggleswitch_off.svg</file>
+        <file>images/toggleswitch_on.svg</file>
+    </qresource>
+</RCC>

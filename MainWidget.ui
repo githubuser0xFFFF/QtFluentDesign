@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>826</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+    <pointsize>-1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget 
+{
+	background: palette(window);
+   font-family: &quot;Segoe UI&quot;;
+   font-size: 14px;
+}
+
+QPushButton
+{
+	background: palette(button);
+    border: 2px solid transparent;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+QPushButton:hover
+{
+	  border: 2px solid palette(dark);
+}
+
+QPushButton:pressed
+{
+	  background: palette(dark);
+}
+
+QPushButton:checked:!pressed:enabled
+{
+	  background: rgb(0, 99, 177);
+      color: rgb(255, 255, 255);
+}
+
+QPushButton:checked:!pressed:hover:enabled
+{
+	  border: 2px solid  rgb(0, 0, 0);
+}
+
+QPushButton:hover
+{
+	  border: 2px solid palette(dark);
+}
+
+
+/*
+ * QToolButton
+*/
+QToolButton
+{
+	background: transparent;
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+QToolButton:hover
+{
+	background: palette(button);
+}
+
+QToolButton:pressed
+{
+	  background: palette(dark);
+}
+
+QToolButton:checked:!pressed:enabled
+{
+	  background: rgb(0, 99, 177);
+      color: rgb(255, 255, 255);
+}
+
+
+/*
+ * QRadioButton
+ */
+QRadioButton::indicator
+{
+	border: none;
+    width: 20px;
+    height: 20px;
+    image-position: center;
+    image: url(:/style/images/radiobutton.svg);
+}
+
+QRadioButton::indicator::disabled
+{
+    image: url(:/style/images/radiobutton_disabled.svg);
+}
+
+QRadioButton::indicator::hover
+{
+    image: url(:/style/images/radiobutton_hover.svg);
+}
+
+QRadioButton::indicator::checked
+{
+    image: url(:/style/images/radiobutton_checked.svg);
+}
+
+QRadioButton::indicator::checked::disabled
+{
+    image: url(:/style/images/radiobutton_checked_disabled.svg);
+}
+
+
+QRadioButton::indicator::checked::hover
+{
+    image: url(:/style/images/radiobutton_checked_hover.svg);
+}
+
+QComboBox
+{
+    border: 2px solid rgb(153, 153 ,153);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+
+QComboBox::hover::!pressed
+{
+    border-color: rgb(102, 102, 102);
+}
+
+QComboBox::pressed
+{
+    background: rgb(204, 204, 204);
+}
+
+QComboBox QAbstractItemView
+ {
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(242, 242, 242);
+    selection-background-color: lightgray;
+   padding-left: 9px;
+   padding-right: 9px;
+}
+
+QComboBox QAbstractItemView::item
+{
+	padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+
+QComboBox::drop-down
+{
+    border: none;
+    padding-right: 8px;
+}
+
+QComboBox::down-arrow
+{
+    image: url(:/style/images/checkbox_down_arrow.svg);
+    height: 6px;
+    width: 12px;
+}
+
+/*
+ * QCheckBox
+ */
+.QCheckBox::indicator
+{
+	width: 16px;
+    height: 16px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.QCheckBox::indicator::disabled
+{
+    border: 2px solid rgb(172, 172, 172);
+}
+
+
+.QCheckBox::indicator::pressed
+{
+    border: 2px solid rgb(102, 102, 102);
+    background: rgb(102, 102, 102);
+}
+
+.QCheckBox::indicator::checked
+{
+    image: url(:/style/images/checkbox_checked.svg);
+}
+
+.QCheckBox::indicator::checked:!pressed
+{
+    border: 2px solid rgb(0, 99, 177);
+    background: rgb(0, 99, 177);
+    image: url(:/style/images/checkbox_checked.svg);
+}
+
+.QCheckBox::indicator::checked:!pressed:hover
+{
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.QCheckBox::indicator:indeterminate
+ {
+    image: url(:/style/images/checkbox_indeterminate.svg);
+    border: 2px solid rgb(0, 99, 177);
+}
+
+
+/*
+ * CToggleSwitch
+ */
+CToggleSwitch
+{
+    min-height: 24px;
+}
+
+
+CToggleSwitch::indicator
+{
+   image: url(:/style/images/toggleswitch_off.svg);
+   image-position: center;
+   width: 44px;
+   height: 24px;
+   padding: 0px;
+}
+
+
+CToggleSwitch::indicator::checked
+{
+   image: url(:/style/images/toggleswitch_on.svg);
+   image-position: center;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>18</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Enabled Button</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Disabled Button</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>ToggleButton</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Disabled Toggle Button</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <property name="spacing">
+      <number>12</number>
+     </property>
+     <item>
+      <widget class="QToolButton" name="toolButton">
+       <property name="text">
+        <string>Tool Button</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Tool Button Disabled</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_3">
+       <property name="text">
+        <string>Toggle Tool Button</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="menuToolButton">
+       <property name="text">
+        <string>MenuToolButton</string>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::InstantPopup</enum>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="text">
+        <string>RadioButton</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>RadioButton Disabled</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="text">
+        <string>RadioButton</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>CheckBox</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>CheckBox</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_3">
+       <property name="text">
+        <string>CheckBox</string>
+       </property>
+       <property name="tristate">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="CToggleSwitch" name="checkBox_4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CToggleSwitch" name="checkBox_5">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Off</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QComboBox" name="comboBox">
+       <item>
+        <property name="text">
+         <string>Item 1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Item 2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Item 3</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Item 1 first item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Item 2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Item 3</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CToggleSwitch</class>
+   <extends>QCheckBox</extends>
+   <header location="global">ToggleSwitch.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
