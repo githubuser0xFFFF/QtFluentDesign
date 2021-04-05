@@ -1,5 +1,7 @@
-#include "MainWidget.h"
-#include "ui_MainWidget.h"
+#include "MainWindow.h"
+#include "ui_MainWindow.h"
+
+
 
 #include <iostream>
 
@@ -16,7 +18,7 @@
 
 
 //============================================================================
-void fixupPopupDelegate(QComboBox* ComboBox, const QSize& IconSize = QSize())
+static void fixupPopupDelegate(QComboBox* ComboBox, const QSize& IconSize = QSize())
 {
     ComboBox->view()->setItemDelegate(new QStyledItemDelegate(ComboBox->view()));
     if (IconSize.isValid())
@@ -29,7 +31,7 @@ void fixupPopupDelegate(QComboBox* ComboBox, const QSize& IconSize = QSize())
 /**
  * Reads the content of the given style sheet file
  */
-QString readStyleSheet(const QString& FileName)
+static QString readStyleSheet(const QString& FileName)
 {
     QString Result;
     QFile StyleSheetFile(FileName);
@@ -40,14 +42,14 @@ QString readStyleSheet(const QString& FileName)
     return Result;
 }
 
-MainWidget::MainWidget(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::MainWidget)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
     m_StyleSheetFile = defstring(CSS_FILE);
     ui->setupUi(this);
-    QPalette Palette(QColor(255, 255, 255));
-    Palette.setColor(QPalette::Active, QPalette::Button, QColor(204, 204, 204));
+    QPalette Palette(QColor(230, 230, 230));
+    Palette.setColor(QPalette::Active, QPalette::Button, QColor(0, 0, 0, 50));
     Palette.setColor(QPalette::Active, QPalette::Shadow, QColor(Qt::black));
     /*Palette.setColor(QPalette::Active, QPalette::Highlight, QColor(247, 138, 9));
     Palette.setColor(QPalette::Inactive, QPalette::Highlight, Palette.color(QPalette::Active, QPalette::Highlight));
@@ -63,15 +65,14 @@ MainWidget::MainWidget(QWidget *parent)
     reloadStyleSheet();
 }
 
-MainWidget::~MainWidget()
+MainWindow::~MainWindow()
 {
     delete ui;
 }
 
 
-void MainWidget::reloadStyleSheet()
+void MainWindow::reloadStyleSheet()
 {
     auto StyleSheet = readStyleSheet(m_StyleSheetFile);
     setStyleSheet(StyleSheet);
 }
-

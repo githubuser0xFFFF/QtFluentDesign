@@ -11,16 +11,16 @@ COPIES += myFiles
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    MainWindow.cpp \
     ToggleSwitch.cpp \
-    main.cpp \
-    MainWidget.cpp
+    main.cpp
 
 HEADERS += \
-    MainWidget.h \
+    MainWindow.h \
     ToggleSwitch.h
 
 FORMS += \
-    MainWidget.ui
+    MainWindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
